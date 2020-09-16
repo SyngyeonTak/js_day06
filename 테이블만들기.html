@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function createTable(){
+            //프로그램에서 사용되는 "는 일반적으로 문자열을 감싸는 용도의 기능이
+            //있는 특수기능을 가지고 있다..
+            //하지만, 특수기능을 보유한 쌍따옴표가 아니라, 단순 문자인 경우엔
+            //어떻게 처리할까?? 예)인용부터 표현하고자 할 때
+            // " \" "
+            
+            //body에 직접 디자인적으로 table을 생성하지 않고, 프로그램으로
+            //table 화면에 출력해본다.
+            // var tb =  document.createElement("table");
+            // tb.border = 2+"px";
+            // tb.width = 600+"px";
+            // document.body.appendChild(tb);
+
+            // for(var i = 1; i<=5; i++){
+            //     var tr = document.createElement("tr");
+            //     tb.appendChild(tr);
+            //     for(var j = 1; j<=3; j++){
+            //          var td = document.createElement("td");
+            //          td.innerText = i+"0"+j;
+            //         tr.appendChild(td);
+            //     }
+            // }
+            var floor = parseInt(prompt("원하는 층을 입려하세요"));
+            var flat  = parseInt(prompt("원하는 호수를 입력하세요"));
+            
+            document.write("<table border = \"2px\" width = \"600px\">");
+
+            for(var i = floor; i >=1; i--){
+                document.write("<tr>");
+                for(var j = 1; j <=flat; j++){
+                    document.write("<td>"+i+"0"+j+"</td>");
+                }
+            }
+            
+        }
+    </script>
+</head>
+<body onLoad = "createTable()">
+    <!-- <table border = "1px" width = "600px" height = "200px">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+-->
+</body>
+</html>
